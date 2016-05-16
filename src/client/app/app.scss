@@ -1,4 +1,13 @@
 @import "common/vars";
+
 body {
   margin: $body-margin;
+}
+
+.layout {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto 30px;
 }
