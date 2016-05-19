@@ -8,7 +8,7 @@ class Channel extends React.Component {
 
   render() {
     return (
-      <ListItem>{this.props.name}</ListItem>
+      <ListItem># {this.props.name}</ListItem>
     )
   }
 }

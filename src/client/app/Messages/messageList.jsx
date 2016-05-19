@@ -16,7 +16,7 @@ class MessageList extends React.Component {
       messages: []
     }
 
-    this.firebaseRef = new Firebase('https://react-messenger.firebaseio.com/messages/firebase')
+    this.firebaseRef = new Firebase('https://react-messenger.firebaseio.com/messages')
     this.firebaseRef.on('child_added', (message) => {
       if (this.state.messages[message.key()]) return
 
@@ -29,7 +29,7 @@ class MessageList extends React.Component {
 
   render() {
     let messageNodes = _.values(this.state.messages).map((message) => {
-      return (<Message key={message.key} text={message.message} />)
+      return (<Message key={message.key} text={message.text}  avatar={message.photo_url} />)
     })
     return (
       <Card className="message-list">

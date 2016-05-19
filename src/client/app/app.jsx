@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {blue500} from 'material-ui/styles/colors'
@@ -11,15 +12,7 @@ import MessageBox from './Messages/messageBox.jsx'
 
 require('./app.scss')
 
-const muiTheme = getMuiTheme({
-  palette: {
-    primary1Color: blue500
-  },
-  appBar: {
-    height: 50,
-    width: 100
-  }
-})
+const muiTheme = getMuiTheme(lightBaseTheme)
 
 
 class App extends React.Component {
